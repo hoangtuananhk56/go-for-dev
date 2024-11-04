@@ -7,3 +7,10 @@ services:
       - "6379:6379"
     volumes:
       - ./db-data/redis:/data
+  
+  redis-stack:
+    image: redis/redis-stack
+    ports:
+      - '6380:6380'
+    volumes:
+      - ./db-data/redis-stack:/data
